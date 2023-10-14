@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_main);
 
-        EditText myedttxt = findViewById(id.editTextTextPersonNameid);
-        String txtinput = myedttxt.getText().toString();
+        EditText myedttxt = findViewById(R.id.editTextTextPersonNameid);
 
         TextView mytextview = findViewById(R.id.txtVid);
 
@@ -27,8 +26,10 @@ public class MainActivity extends AppCompatActivity {
         mybttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String mytxtinput = myedttxt.getText().toString();
+
                 Toast.makeText(MainActivity.this,
-                        "Welcome to our app "+txtinput,
+                        "Welcome to our app "+mytxtinput,
                         Toast.LENGTH_SHORT).show();
 
             }
